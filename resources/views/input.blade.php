@@ -27,7 +27,7 @@
         <option value='delivery' disabled selected style='display:none;'>-選択してください-</option>
   	   @foreach ($deli_days as $deli_day)
   	     <option value={{$deli_day}}>{{$deli_day}}<br></option>
-      @endforeach
+       @endforeach
   	   </select>
   	     <p><input type="hidden" name="send_data" value="入力情報"></p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">確認画面へ</button>

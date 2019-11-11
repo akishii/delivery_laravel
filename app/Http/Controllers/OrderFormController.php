@@ -18,7 +18,7 @@ class OrderFormController extends Controller
         for ($i = 0; $i <= 30; $i++) {
             $deli_day = $first_deliday->copy()->addweekdays($i);
 
-                if ($deli_day === Holiday::all()){
+                if ($deli_day === Holiday::select('holiday_date')->get()){
                     $deli_days = $deli_day->adddays(1);
                 }
             $deli_days[] = $deli_day->format('Y-m-d');
